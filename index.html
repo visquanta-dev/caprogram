@@ -126,6 +126,70 @@
             margin-bottom: 20px;
         }
 
+        /* Hero: logos mirror around x; shift uses same font metrics as REVOLT (Inter 800) so ch matches — approx. centre of V vs word */
+        .cover-hero-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            text-align: center;
+        }
+        .cover-logo-row-metrics {
+            font-family: 'Inter', -apple-system, sans-serif;
+            font-weight: 800;
+            font-size: 6rem;
+            letter-spacing: -2px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 88px;
+            box-sizing: border-box;
+            transform: translateX(-0.5ch);
+        }
+        .cover-logo-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box;
+        }
+        .cover-logo-slot {
+            flex: 1 1 0;
+            min-width: 0;
+            display: flex;
+            align-items: center;
+        }
+        .cover-logo-slot--left { justify-content: flex-end; }
+        .cover-logo-slot--right { justify-content: flex-start; }
+        .cover-logo-slot img {
+            height: 76px;
+            width: auto;
+            max-width: 100%;
+            display: block;
+            opacity: 0.95;
+        }
+        .cover-logo-x {
+            flex: 0 0 auto;
+            font-family: 'Space Mono', monospace;
+            font-size: 4rem;
+            color: rgba(255,106,0,0.5);
+            font-weight: 300;
+            line-height: 1;
+        }
+        .cover-hero-brand h1.cover-revolt-title {
+            width: 100%;
+            text-align: center;
+            font-family: 'Inter', -apple-system, sans-serif;
+            font-size: 6rem;
+            font-weight: 800;
+            line-height: 1.0;
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+
         .analytics-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -422,9 +486,16 @@
 
             .content-split { grid-template-columns: 1fr !important; padding: 0 10px !important; text-align: center !important; }
             h1, .hero-title, h2, h3 { font-size: clamp(1.7rem, 9vw, 2.8rem) !important; line-height: 1.1 !important; word-break: break-word !important; overflow-wrap: break-word !important; text-align: center !important; }
-            .cover-logo-row img { height: 48px !important; }
-            .cover-logo-row .cover-logo-x { font-size: 2rem !important; }
-            .cover-logo-row { gap: 22px !important; margin-bottom: 44px !important; }
+            .cover-logo-slot img { height: 48px !important; }
+            .cover-logo-x { font-size: 2rem !important; }
+            .cover-logo-row { gap: 16px !important; max-width: 100% !important; }
+            .cover-logo-row-metrics {
+                margin-bottom: 44px !important;
+                font-size: clamp(1.7rem, 9vw, 2.8rem) !important;
+                font-weight: 800 !important;
+                letter-spacing: -2px !important;
+                transform: translateX(-0.5ch);
+            }
             .hero-subtitle { font-size: 1rem !important; word-break: break-word !important; text-align: center !important; }
             .hero-description { font-size: 1.05rem !important; text-align: center !important; max-width: 100% !important; }
             .text-column { display: flex !important; flex-direction: column !important; align-items: center !important; text-align: center !important; }
@@ -482,20 +553,26 @@
 
         <div style="z-index: 10; max-width: 900px; display: flex; flex-direction: column; align-items: center;">
 
-            <!-- LOGO LOCKUP: COVERALL × VISQUANTA -->
-            <div class="cover-logo-row" style="display: flex; align-items: center; gap: 56px; margin-bottom: 88px; flex-wrap: wrap; justify-content: center;">
-                <img src="assets/CAP_logo_lt.svg" alt="Coverall" style="height: 76px; opacity: 0.95;">
-                <span class="cover-logo-x" style="font-family: 'Space Mono', monospace; font-size: 4rem; color: rgba(255,106,0,0.5); font-weight: 300; line-height: 1;">x</span>
-                <img src="assets/visquanta-logo.png" alt="VisQuanta" style="height: 76px; opacity: 0.95;">
+            <div class="cover-hero-brand">
+                <!-- LOGO LOCKUP: offset so x aligns with centre of "V" in REVOLT (Space Mono metrics) -->
+                <div class="cover-logo-row-metrics">
+                    <div class="cover-logo-row">
+                        <div class="cover-logo-slot cover-logo-slot--left">
+                            <img src="assets/CAP_logo_lt.svg" alt="Coverall">
+                        </div>
+                        <span class="cover-logo-x" aria-hidden="true">x</span>
+                        <div class="cover-logo-slot cover-logo-slot--right">
+                            <img src="assets/visquanta-logo.png" alt="VisQuanta">
+                        </div>
+                    </div>
+                </div>
+
+                <span style="font-family: 'Space Mono', monospace; color: var(--orange); letter-spacing: 5px; font-size: 1.1rem; margin-bottom: 1rem; display: block;">
+                    // DATABASE REACTIVATION CAMPAIGN
+                </span>
+
+                <h1 class="cover-revolt-title">REVOLT</h1>
             </div>
-
-            <span style="font-family: 'Space Mono', monospace; color: var(--orange); letter-spacing: 5px; font-size: 1.1rem; margin-bottom: 1rem; display: block;">
-                // DATABASE REACTIVATION CAMPAIGN
-            </span>
-
-            <h1 style="font-size: 6rem; font-weight: 800; line-height: 1.0; margin-bottom: 14px; text-transform: uppercase; letter-spacing: -2px;">
-                REVOLT
-            </h1>
 
             <span style="font-family: 'Inter', sans-serif; font-size: 1rem; color: rgba(255,255,255,0.35); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 36px; display: block;">Powered by VisQuanta</span>
 
