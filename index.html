@@ -422,6 +422,9 @@
 
             .content-split { grid-template-columns: 1fr !important; padding: 0 10px !important; text-align: center !important; }
             h1, .hero-title, h2, h3 { font-size: clamp(1.7rem, 9vw, 2.8rem) !important; line-height: 1.1 !important; word-break: break-word !important; overflow-wrap: break-word !important; text-align: center !important; }
+            .cover-logo-row img { height: 48px !important; }
+            .cover-logo-row .cover-logo-x { font-size: 2rem !important; }
+            .cover-logo-row { gap: 22px !important; margin-bottom: 44px !important; }
             .hero-subtitle { font-size: 1rem !important; word-break: break-word !important; text-align: center !important; }
             .hero-description { font-size: 1.05rem !important; text-align: center !important; max-width: 100% !important; }
             .text-column { display: flex !important; flex-direction: column !important; align-items: center !important; text-align: center !important; }
@@ -480,10 +483,10 @@
         <div style="z-index: 10; max-width: 900px; display: flex; flex-direction: column; align-items: center;">
 
             <!-- LOGO LOCKUP: COVERALL × VISQUANTA -->
-            <div style="display: flex; align-items: center; gap: 28px; margin-bottom: 44px; flex-wrap: wrap; justify-content: center;">
-                <img src="assets/CAP_logo_lt.svg" alt="Coverall" style="height: 38px; opacity: 0.95;">
-                <span style="font-family: 'Space Mono', monospace; font-size: 2rem; color: rgba(255,106,0,0.5); font-weight: 300; line-height: 1;">x</span>
-                <img src="assets/visquanta-logo.png" alt="VisQuanta" style="height: 38px; opacity: 0.95;">
+            <div class="cover-logo-row" style="display: flex; align-items: center; gap: 56px; margin-bottom: 88px; flex-wrap: wrap; justify-content: center;">
+                <img src="assets/CAP_logo_lt.svg" alt="Coverall" style="height: 76px; opacity: 0.95;">
+                <span class="cover-logo-x" style="font-family: 'Space Mono', monospace; font-size: 4rem; color: rgba(255,106,0,0.5); font-weight: 300; line-height: 1;">x</span>
+                <img src="assets/visquanta-logo.png" alt="VisQuanta" style="height: 76px; opacity: 0.95;">
             </div>
 
             <span style="font-family: 'Space Mono', monospace; color: var(--orange); letter-spacing: 5px; font-size: 1.1rem; margin-bottom: 1rem; display: block;">
@@ -497,7 +500,7 @@
             <span style="font-family: 'Inter', sans-serif; font-size: 1rem; color: rgba(255,255,255,0.35); letter-spacing: 3px; text-transform: uppercase; margin-bottom: 36px; display: block;">Powered by VisQuanta</span>
 
             <p style="font-size: 1.3rem; line-height: 1.8; color: rgba(255,255,255,0.7); margin-bottom: 40px; font-weight: 300;">
-                Your dealer database is already full of warm leads. Revolt uses conversational AI agent to re-engage past buyers over text, qualifying them for a trade-in or an extended warranty without a single cold call.
+                Your dealer database is already full of warm leads. Revolt uses a conversational AI agent to re-engage past buyers over text, qualifying them for a trade-in or an extended warranty without a single cold call.
             </p>
 
             <div style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center;">
@@ -535,7 +538,7 @@
                     </div>
                     <div class="analytics-card">
                         <span class="analytics-title">// OBSERVATION</span>
-                        <p class="analytics-body">Marc hadn't been back in two years. One text later he volunteered that he was already thinking about trading in. The AI agent gathered km, preference, and locked in a specific time before the conversation ended.</p>
+                        <p class="analytics-body">Marc hadn't been back in two years. One text later, he volunteered that he was already thinking about trading in. The AI agent gathered km, preference, and locked in a specific time before the conversation ended.</p>
                     </div>
                 </div>
             </div>
@@ -562,9 +565,9 @@
                     <div class="hermes-screen">
                         <div class="date-chip">Mar 18, 2026</div>
                         <div class="hermes-bubble agent"><span class="meta">10:14 AM</span>Hey is this Marc? This is Lexi from <span style="filter:blur(3px);opacity:0.7;user-select:none;">Westview Toyota</span>. You picked up a RAV4 from us back in 2021. Reply STOP to opt out</div>
-                        <div class="hermes-bubble customer"><span class="meta">10:22 AM</span>yeah thats me</div>
-                        <div class="hermes-bubble agent"><span class="meta">10:23 AM</span>Hey Marc! Just checking in to see how its been running. We reach out to past customers to see if theyre happy where theyre at or if there's something we can help with</div>
-                        <div class="hermes-bubble customer"><span class="meta">10:31 AM</span>honestly its good but ive been thinking about trading it in</div>
+                        <div class="hermes-bubble customer"><span class="meta">10:22 AM</span>yeah that's me</div>
+                        <div class="hermes-bubble agent"><span class="meta">10:23 AM</span>Hey Marc! Just checking in to see how it's been running. We reach out to past customers to see if they're happy where they're at or if there's something we can help with</div>
+                        <div class="hermes-bubble customer"><span class="meta">10:31 AM</span>honestly it's good but I've been thinking about trading it in</div>
                         <div class="hermes-bubble agent"><span class="meta">10:32 AM</span>Oh nice, good timing actually. You thinking something bigger or just something newer?</div>
                         <div class="hermes-bubble customer"><span class="meta">10:35 AM</span>bigger, need more space</div>
                         <div class="hermes-bubble agent"><span class="meta">10:36 AM</span>Makes sense. What's the km on the RAV4 right now?</div>
@@ -643,9 +646,9 @@
                         <div class="hermes-bubble customer"><span class="meta">11:26 AM</span>100% non negotiable lol</div>
                         <div class="hermes-bubble agent"><span class="meta">11:27 AM</span>Ha fair. Financing or buying outright?</div>
                         <div class="hermes-bubble customer"><span class="meta">11:30 AM</span>financing is fine, monthly payment is what matters for us</div>
-                        <div class="hermes-bubble agent"><span class="meta">11:31 AM</span>Perfect. Any must haves, heated seats, remote start, third row?</div>
+                        <div class="hermes-bubble agent"><span class="meta">11:31 AM</span>Perfect. Any must-haves, heated seats, remote start, third row?</div>
                         <div class="hermes-bubble customer"><span class="meta">11:33 AM</span>heated seats and remote start for sure. third row would be a bonus</div>
-                        <div class="hermes-bubble agent"><span class="meta">11:34 AM</span>Got it all down. Does Thursday at 10am work for a call? They'll have your trade number and some options pulled for you</div>
+                        <div class="hermes-bubble agent"><span class="meta">11:34 AM</span>Got it all down. Does Thursday at 10:00 AM work for a call? They'll have your trade number and some options pulled for you</div>
                         <div class="hermes-bubble customer"><span class="meta">11:36 AM</span>yes that works!</div>
                         <div class="hermes-bubble agent"><span class="meta">11:37 AM</span>Perfect, I'll have them call you at 10. Talk soon Diane</div>
                     </div>
@@ -712,10 +715,10 @@
                     <div class="hermes-screen">
                         <div class="date-chip">Mar 24, 2026</div>
                         <div class="hermes-bubble agent"><span class="meta">09:08 AM</span>Hey is this Kevin? This is Jordan from <span style="filter:blur(3px);opacity:0.7;user-select:none;">Northside Chev</span>. You bought a Corolla from us a while back. Reply STOP to opt out</div>
-                        <div class="hermes-bubble customer"><span class="meta">09:14 AM</span>ya thats me</div>
+                        <div class="hermes-bubble customer"><span class="meta">09:14 AM</span>ya that's me</div>
                         <div class="hermes-bubble agent"><span class="meta">09:15 AM</span>Hey Kevin! Wanted to reach out and see if you had any interest in trading in the Corolla. We've been seeing really strong trade values lately</div>
-                        <div class="hermes-bubble customer"><span class="meta">09:22 AM</span>nah Im actually really happy with that car</div>
-                        <div class="hermes-bubble agent"><span class="meta">09:23 AM</span>No worries at all! Is there anything else vehicle wise we can ever help you out with?</div>
+                        <div class="hermes-bubble customer"><span class="meta">09:22 AM</span>nah I'm actually really happy with that car</div>
+                        <div class="hermes-bubble agent"><span class="meta">09:23 AM</span>No worries at all! Is there anything else vehicle-wise we can ever help you out with?</div>
                         <div class="hermes-bubble customer"><span class="meta">09:31 AM</span>actually yeah now that you mention it. I have a 2018 CX-5 that completely ran out of warranty and I've been looking into getting coverage on it</div>
                         <div class="hermes-bubble agent"><span class="meta">09:32 AM</span>Oh yes absolutely, that's actually something we can help with. We have an extended warranty program that covers all makes and models including vehicles already outside of factory coverage. Do you know roughly what the km is on it?</div>
                         <div class="hermes-bubble customer"><span class="meta">09:41 AM</span>probably around 94,000 km</div>
@@ -785,13 +788,13 @@
                     </div>
                     <div class="hermes-screen">
                         <div class="date-chip">Mar 24, 2026</div>
-                        <div class="hermes-bubble customer"><span class="meta">09:54 AM</span>one more question before the call, roughly what kind of things does it cover</div>
+                        <div class="hermes-bubble customer"><span class="meta">09:54 AM</span>one more question before the call, roughly what kind of things does it cover?</div>
                         <div class="hermes-bubble agent"><span class="meta">09:55 AM</span>Generally speaking there are different tiers. Some plans focus on major components like engine and drivetrain and others are more comprehensive across the vehicle. It covers all makes and models so the CX-5 is definitely eligible</div>
-                        <div class="hermes-bubble customer"><span class="meta">10:02 AM</span>ok and is it something you can finance</div>
+                        <div class="hermes-bubble customer"><span class="meta">10:02 AM</span>ok and is it something you can finance?</div>
                         <div class="hermes-bubble agent"><span class="meta">10:03 AM</span>Good question. There are financing options available so it doesn't all have to come out of pocket at once. The specialist will go over exact pricing and payment options with you on the call, I don't want to quote anything before they've had a chance to look at your specific vehicle</div>
-                        <div class="hermes-bubble customer"><span class="meta">10:08 AM</span>ok thats fair</div>
+                        <div class="hermes-bubble customer"><span class="meta">10:08 AM</span>ok that's fair</div>
                         <div class="hermes-bubble agent"><span class="meta">10:09 AM</span>And one other thing worth knowing, you don't need to bring the CX-5 in for any kind of inspection before the call. Nothing required on your end</div>
-                        <div class="hermes-bubble customer"><span class="meta">10:11 AM</span>oh thats actually really good to hear</div>
+                        <div class="hermes-bubble customer"><span class="meta">10:11 AM</span>oh that's actually really good to hear</div>
                         <div class="hermes-bubble agent"><span class="meta">10:12 AM</span>Yeah makes it easy. Talk to you Thursday at 11:30 Kevin</div>
                     </div>
                     <div class="hermes-mobile-scroll-hint" onclick="this.parentNode.querySelector('.hermes-screen').scrollBy({top: 250, behavior: 'smooth'});">
